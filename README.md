@@ -47,8 +47,52 @@
 
 - Для Unity  в отчете привести скришноты вывода сообщения Hello World в консоль. 
 - ![image](https://user-images.githubusercontent.com/113470407/224608221-4a89553c-d6c2-4a26-a8dc-29cce34344c9.png)
+Задание 2
+Пошагово выполнить каждый пункт раздела "ход работы" с описанием и примерами реализации задач
+Ход работы:
+Произвести подготовку данных для работы с алгоритмом линейной регрессии. 10 видов данных были установлены случайным образом, и данные находились в линейной зависимости. Данные преобразуются в формат массива, чтобы их можно было вычислить напрямую при использовании умножения и сложения.
+
+![image](https://user-images.githubusercontent.com/113470407/224630277-5d4cd209-d560-49a9-bfa5-61604e630570.png)
+Определите связанные функции. Функция модели: определяет модель линейной регрессии wx+b. Функция потерь: функция потерь среднеквадратичной ошибки. Функция оптимизации: метод градиентного спуска для нахождения частных производных w и b.
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = [3, 21, 22, 34, 54, 34, 55, 67, 89, 99]
+x = np.array(x)
+y = [2, 22, 24, 65, 79, 82, 55, 130, 150, 199]
+y = np.array(y)
+
+plt.scatter(x, y)
 
 
+def model(a, b, x):
+    return a * x + b
+
+
+def loss_function(a, b, x, y):
+    num = len(x)
+    prediction = model(a, b, x)
+    return (0.5 / num) * (np.square(prediction - y)).sum()
+
+
+def optimize(a, b, x, y):
+    num = len(x)
+    prediction = model(a, b, x)
+    da = (1.0 / num) * ((prediction - y) * x).sum()
+    db = (1.0 / num) * ((prediction - y).sum())
+    a = a - Lr * da
+    b = b - Lr * db
+    return a, b
+
+
+def iterate(a, b, x, y, times):
+    for i in range(times):
+        a, b = optimize(a, b, x, y)
+    return a, b
+    
+начать итерацию:
+![image](https://user-images.githubusercontent.com/113470407/224630374-47c55128-d0f7-4a11-9d5b-e0dce8f4feb5.png)
 
 
 
