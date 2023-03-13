@@ -41,7 +41,8 @@
 #Для Python в отчете привести скриншоты с демонстрацией сохранения документа google.colab на свой диск с запуском программы, выводящей сообщение Hello World.
 
 
-![image](https://user-images.githubusercontent.com/113470407/207442662-d1874c11-8d32-492e-9738-42d8dac5b01e.png)
+![image](https://user-images.githubusercontent.com/113470407/224609556-c201a94f-9562-401c-ae6f-7abbb9c7cb05.png)
+
 
 
 - Для Unity  в отчете привести скришноты вывода сообщения Hello World в консоль. 
