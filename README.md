@@ -45,7 +45,9 @@
 
 
 - Для Unity  в отчете привести скришноты вывода сообщения Hello World в консоль. 
-- ![image](https://user-images.githubusercontent.com/113470407/207443155-6df91398-6a31-4ee0-a263-e9bc6d0f8340.png)
+- ![image](https://user-images.githubusercontent.com/113470407/224608221-4a89553c-d6c2-4a26-a8dc-29cce34344c9.png)
+
+
 
 
 
